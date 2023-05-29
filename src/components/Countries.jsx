@@ -7,7 +7,7 @@ const Countries = props => {
     <div className="d-flex flex-wrap container ">
      {props.countries.map((country)=>{
         const countryNew={country, id:uuidv4()}
-        return <SingleCountry {...countryNew} key={countryNew.id}></SingleCountry>
+        return <SingleCountry {...countryNew} key={countryNew.id} onRemoveCountry={props.onRemoveCountry}></SingleCountry>
      })}
     </div>
   );
